@@ -7,6 +7,10 @@ const PORT = 5000;
 app.use(express.json({ type: "application/json" }));
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Api is connected");
+});
+
 let classes = [
   { id: 1, type: 'Yoga', bookedIds: [], waitlistIds: [] , slotsAvailable: 2 , waitlistNumber: 0 , timing: {
     date: '2024-09-18', 
