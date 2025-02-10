@@ -4,8 +4,8 @@ const cors = require('cors');
 const app = express();
 const PORT = 5000;
 
+app.use(express.json({ type: "application/json" }));
 app.use(cors());
-app.use(express.json());
 
 let classes = [
   { id: 1, type: 'Yoga', bookedIds: [], waitlistIds: [] , slotsAvailable: 2 , waitlistNumber: 0 , timing: {
